@@ -13,43 +13,47 @@ class Robot:
 
     @staticmethod
     def move_left():
-        return 'MOVE LEFT'
+        print('MOVE LEFT')
+
+    @staticmethod
+    def move_left():
+        print('MOVE LEFT')
 
     @staticmethod
     def move_right():
-        return 'MOVE RIGHT'
+        print('MOVE RIGHT')
 
     @staticmethod
     def move_up():
-        return 'MOVE UP'
+        print('MOVE UP')
     
     @staticmethod
     def move_down():
-        return 'MOVE DOWN'
+        print('MOVE DOWN')
 
     @staticmethod
     def attack_left():
-        return 'ATTACK LEFT'
+        print('ATTACK LEFT')
 
     @staticmethod
     def attack_right():
-        return 'ATTACK RIGHT'
+        print('ATTACK RIGHT')
 
     @staticmethod
     def attack_up():
-        return 'ATTACK UP'
+        print('ATTACK UP')
     
     @staticmethod
     def attack_down():
-        return 'ATTACK DOWN'
+        print('ATTACK DOWN')
 
     @staticmethod
     def selfdestruct():
-        return 'SELFDESTRUCTION'
-    
+        print('SELFDESTRUCTION')
+
     @staticmethod
     def guard():
-        return 'GUARD'
+        print('GUARD')
 
     @classmethod
     def from_input(cls, number, health, vision):
@@ -60,7 +64,6 @@ class Robot:
     
     def __str__(self):
         return f'Robot n.{self.number} h:{self.health}'
-
 
 
 def robots_from_input():
@@ -85,4 +88,4 @@ while True:
     robots = robots_from_input()
     for robot in robots:
         print(robot, file=sys.stderr, flush=True)
-        print(robot.selfdestruct())
+        robot.selfdestruct()
